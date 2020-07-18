@@ -12,6 +12,23 @@ import CoreData
 
 class TimeService {
     
+    static func saveTime(habit: String, seconds: Int) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Interval", in: context)
+        
+        let newEntity = NSManagedObject(entity: entity!, insertInto: context)
+        newEntity.setValue(seconds, forKey: "seconds")
+        newEntity.setValue(habit, forKey: "habit")
+        
+        do {
+            try context.save()
+            print("saved")
+            
+        } catch {
+            print("Failed saving")
+        }
+    }
+    
     // returns sum of time across intervals within date range in seconds
     static func sumTimeFromDates(habit: String, startDate: Date, endDate: Date) -> Int {
         let intervals = getIntervals(habit: habit, startDate: startDate, endDate: endDate)

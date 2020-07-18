@@ -8,10 +8,12 @@
 
 import UIKit
 import CoreData
+import Charts
 
 class HabitController: UIViewController {
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var barChart: BarChartView!
     var habit: String?
 
     
@@ -19,45 +21,55 @@ class HabitController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = habit!
         
+        dayTotalsBarChart()
     }
+    
+    func dayTotalsBarChart() {
+        var entries = [] as! [BarChartDataEntry]
+        var colors = [] as! [NSUIColor]
+        for i in stride(from: -7, through: -1, by: 1) {
+            let startDate = Date().changeDays(by: i)
+            let endDate = Date().changeDays(by: i + 1)
+            
+            let time = Double(TimeService.sumTimeFromDates(habit: habit!, startDate: startDate, endDate: endDate)) / 3600
+            print(time)
+            let entry = BarChartDataEntry(x: Double(i), y: time)
+            colors.append(UIColor.random)
+                       
+            entries.append(entry)
+        }
+                   
+        let chartDataSet = BarChartDataSet(entries: entries, label: nil)
+        let chartData = BarChartData(dataSet: chartDataSet)
+        chartDataSet.colors = colors as [NSUIColor]
+      
+        barChart.data = chartData
+    }
+    
+    
     
     @IBAction func submitTime(_ sender: Any) {
         if !timeTextField.text!.isEmpty {
             let seconds = Int(timeTextField.text!)! * 60
             timeTextField.text = ""
-            saveTime(seconds: seconds)
+            TimeService.saveTime(habit: habit!, seconds: seconds)
         }
         
     }
-    
-    func saveTime(seconds: Int) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-               let entity = NSEntityDescription.entity(forEntityName: "Interval", in: context)
-               
-               let newEntity = NSManagedObject(entity: entity!, insertInto: context)
-               newEntity.setValue(seconds, forKey: "seconds")
-               newEntity.setValue(habit, forKey: "habit")
-               
-               do {
-                   try context.save()
-                   print("saved")
-                   
-               } catch {
-                   print("Failed saving")
-               }
-    }
-//     MARK: - Navigation
-//
-//     In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTimer" {
             let controller = segue.destination as! TimerController
             controller.habit = habit!
         }
         
-//         Get the new view controller using segue.destination.
-//         Pass the selected object to the new view controller.
     }
     
 
+}
+
+extension Date {
+    func changeDays(by days: Int) -> Date {
+        return Calendar.current.date(byAdding: .day, value: days, to: self)!
+    }
 }
