@@ -34,6 +34,7 @@ class HabitController: UIViewController {
             let time = Double(TimeService.sumTimeFromDates(habit: habit!, startDate: startDate, endDate: endDate)) / 3600
             print(time)
             let entry = BarChartDataEntry(x: Double(i), y: time)
+            entry.accessibilityLabel = "\(startDate)"
             colors.append(UIColor.random)
                        
             entries.append(entry)
@@ -61,11 +62,13 @@ class HabitController: UIViewController {
         if segue.identifier == "toTimer" {
             let controller = segue.destination as! TimerController
             controller.habit = habit!
+        } else if segue.identifier == "toLog" {
+            let destination = segue.destination as! LogController
+            
+            destination.habit = habit!
         }
         
     }
-    
-
 }
 
 extension Date {
