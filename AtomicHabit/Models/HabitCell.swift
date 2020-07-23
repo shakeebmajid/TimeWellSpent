@@ -10,6 +10,14 @@ import UIKit
 
 class HabitCell: UITableViewCell {
     
+    @IBOutlet weak var mondayBox: UIButton!
+    @IBOutlet weak var tuesdayBox: UIButton!
+    @IBOutlet weak var wednesdayBox: UIButton!
+    @IBOutlet weak var thursdayBox: UIButton!
+    @IBOutlet weak var fridayBox: UIButton!
+    @IBOutlet weak var saturdayBox: UIButton!
+    @IBOutlet weak var sundayBox: UIButton!
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {

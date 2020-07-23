@@ -53,8 +53,6 @@ class LogController: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let destination = segue.destination as! NewNoteController
         
         destination.habit = habit!
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
 
 }
