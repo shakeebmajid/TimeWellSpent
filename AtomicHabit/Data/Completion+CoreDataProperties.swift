@@ -18,6 +18,6 @@ extension Completion {
 
     @NSManaged public var complete: Bool
     @NSManaged public var habit: String?
-    @NSManaged public var createdAt: Date?
+    @NSManaged public var date: Date?
 
 }

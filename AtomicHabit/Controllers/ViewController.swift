@@ -39,6 +39,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let habit = habits[row] as! NSManagedObject
         let habitName = habit.value(forKey: "name") as! String
         cell.nameLabel.text = habitName
+        cell.initializeCompletions()
         
         return cell
     }

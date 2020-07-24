@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HabitCell: UITableViewCell {
     
@@ -20,15 +21,46 @@ class HabitCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    var completions = [] as [NSManagedObject]
+    
+    var someDict : [UIButton:NSManagedObject] = [:]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
 
+    }
+    func initializeCompletions() {
+        completions = CompletionService.getCompletionsForWeek(habit: nameLabel.text!)
+        someDict = [mondayBox:completions[0], tuesdayBox: completions[1], wednesdayBox: completions[2], thursdayBox: completions[3], fridayBox: completions[4], saturdayBox: completions[5], sundayBox: completions[6]]
+        
+        for (button, completion) in someDict {
+            if completion.value(forKey: "complete") as! Bool {
+                button.backgroundColor = UIColor.green
+            }
+        }
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
     }
 
+    @IBAction func toggleCompletion(_ sender: Any) {
+        let button = sender as! UIButton
+        
+        
+        let completion = someDict[button]
+        
+        if (completion?.value(forKey: "complete") as! Bool) {
+            completion?.setValue(false, forKey: "complete")
+            button.backgroundColor = UIColor.white
+        } else {
+            completion?.setValue(true, forKey: "complete")
+            button.backgroundColor = UIColor.green
+
+        }
+        CompletionService.saveCompletion()
+        
+    }
+    
 }

@@ -46,6 +46,9 @@
                                                             <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="toggleCompletion:" destination="1qI-3W-fKC" eventType="touchUpInside" id="oTi-9g-6fI"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaK-32-W6j">
                                                     <rect key="frame" x="131" y="46" width="30" height="30"/>
@@ -60,6 +63,9 @@
                                                             <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="toggleCompletion:" destination="1qI-3W-fKC" eventType="touchUpInside" id="mDu-VP-qeC"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyt-q9-gur">
                                                     <rect key="frame" x="169" y="46" width="30" height="30"/>
@@ -74,6 +80,9 @@
                                                             <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="toggleCompletion:" destination="1qI-3W-fKC" eventType="touchUpInside" id="nQU-Sv-gx9"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ai-i7-a24">
                                                     <rect key="frame" x="207" y="46" width="30" height="30"/>
@@ -88,6 +97,9 @@
                                                             <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="toggleCompletion:" destination="1qI-3W-fKC" eventType="touchUpInside" id="LFi-2I-Z7b"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgy-yH-GGu">
                                                     <rect key="frame" x="245" y="46" width="30" height="30"/>
@@ -102,6 +114,9 @@
                                                             <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="toggleCompletion:" destination="1qI-3W-fKC" eventType="touchUpInside" id="lho-yv-imv"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwG-rl-RUe">
                                                     <rect key="frame" x="283" y="46" width="30" height="30"/>
@@ -116,6 +131,9 @@
                                                             <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="toggleCompletion:" destination="1qI-3W-fKC" eventType="touchUpInside" id="Yw4-As-Quu"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUs-rb-8SW">
                                                     <rect key="frame" x="319" y="46" width="30" height="30"/>
@@ -130,6 +148,9 @@
                                                             <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="toggleCompletion:" destination="1qI-3W-fKC" eventType="touchUpInside" id="ZqL-gx-5vL"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

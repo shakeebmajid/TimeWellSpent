@@ -11,8 +11,4 @@ import CoreData
 
 @objc(Completion)
 public class Completion: NSManagedObject {
-    public override func awakeFromInsert() {
-           setPrimitiveValue(Date(), forKey: "createdAt")
-           print("\(Date())")
-    }
 }
