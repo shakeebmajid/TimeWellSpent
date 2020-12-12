@@ -32,8 +32,8 @@ class TimerController: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         times = TimeService.getIntervalsForCurrentDay(habit: habit!)
         tableView.reloadData()
-        dayTimeLabel.text = "\(formatTime(seconds: TimeService.sumTimeFromIntervals(intervals: times)))"
-        weekTimeLabel.text = "\(formatTime(seconds: TimeService.sumTimeFromDates(habit: habit!, startDate: Date().startOfWeek!, endDate: Date())))"
+        dayTimeLabel.text = "\(TimeService.formatTime(seconds: TimeService.sumTimeFromIntervals(intervals: times)))"
+        weekTimeLabel.text = "\(TimeService.formatTime(seconds: TimeService.sumTimeFromDates(habit: habit!, startDate: Date().startOfWeek!, endDate: Date())))"
         
         // for going to background while a timer is running
         NotificationCenter.default.addObserver(self, selector: #selector(pauseWhenBackground(noti: )), name: UIApplication.didEnterBackgroundNotification, object: nil)
@@ -52,7 +52,7 @@ class TimerController: UIViewController, UITableViewDataSource, UITableViewDeleg
         if let savedDate = UserDefaults.standard.object(forKey: "savedTime") as? Date {
             let diffSeconds = getTimeDifference(startDate: savedDate)
             interval += diffSeconds
-            timeLabel.text = formatTime(seconds: interval)
+            timeLabel.text = TimeService.formatTime(seconds: interval)
             
         }
         startTimer()
@@ -141,7 +141,7 @@ class TimerController: UIViewController, UITableViewDataSource, UITableViewDeleg
         let row = indexPath.row
 
         cell.lapLabel.text = "\(row)"
-        cell.lapTimeLabel.text = formatTime(seconds: times[row].value(forKey: "seconds") as! Int)
+        cell.lapTimeLabel.text = TimeService.formatTime(seconds: times[row].value(forKey: "seconds") as! Int)
         
         
         return cell
@@ -151,14 +151,7 @@ class TimerController: UIViewController, UITableViewDataSource, UITableViewDeleg
         return times.count
     }
     
-    func formatTime(seconds: Int) -> String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.dateFormat = "HH:mm:ss"
-        
-        return formatter.string(from: Date(timeIntervalSinceReferenceDate: TimeInterval(seconds)))
-    }
+
 
 }
 

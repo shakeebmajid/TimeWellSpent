@@ -33,7 +33,6 @@ class CompletionService {
         do {
             let result = try context.fetch(request)
             if (result as! [NSManagedObject]).count == 7 {
-                print("retrieved existing week")
                 return result as! [NSManagedObject]
             } else {
                 print("count: \((result as! [NSManagedObject]).count)")

@@ -37,7 +37,10 @@ class LogController: UIViewController, UITableViewDelegate, UITableViewDataSourc
       
         let row = indexPath.row
         cell.noteLabel.text = notes[row].value(forKey: "text") as! String
-        cell.dateLabel.text = "\(notes[row].value(forKey: "createdAt") as! Date)"
+        let df = DateFormatter()
+//        df.timeZone = TimeZone(abbreviation: "EST")
+        df.dateFormat = "yyyy-MM-dd hh:mm a"
+        cell.dateLabel.text = df.string(from: notes[row].value(forKey: "createdAt") as! Date)
         return cell
     }
       
