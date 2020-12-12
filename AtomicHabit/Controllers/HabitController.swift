@@ -50,41 +50,67 @@ class HabitController: UIViewController {
     }
     
     func dayTotalsBarChart() {
-        var entries = [] as! [ChartDataEntry]
-        var colors = [] as! [NSUIColor]
+//        let entry = ChartDataEntry(x: Double(0), y: 0)
+        var entries = [] as [ChartDataEntry]
         for i in stride(from: 0, through: 6, by: 1) {
             let startDate = Date().startOfWeek?.changeDays(by: i)
             let endDate = Date().startOfWeek?.changeDays(by: i + 1)
             
-            let time = Double(TimeService.sumTimeFromDates(habit: habit!, startDate: startDate!, endDate: endDate!)) / 3600
-            print(time)
+            let time = Double(TimeService.sumTimeFromDates(habit: habit!, startDate: startDate!, endDate: endDate!)) / 60
             let entry = ChartDataEntry(x: Double(i), y: time)
-            entry.accessibilityLabel = "\(startDate)"
-                       
             entries.append(entry)
         }
                    
-        let chartDataSet = LineChartDataSet(entries: entries, label: "Week")
+        // chart data set
+        let chartDataSet = LineChartDataSet(entries: entries, label: "minutes completed")
         chartDataSet.drawValuesEnabled = true
         chartDataSet.drawCirclesEnabled = true
         chartDataSet.circleHoleRadius = 2.0
         chartDataSet.circleRadius = 3.0
+        chartDataSet.colors = [UIColor.white]
+        chartDataSet.mode = .cubicBezier
+        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.lineWidth = 3
+        chartDataSet.fill = Fill(color: UIColor.white)
+        chartDataSet.fillAlpha = 0.4
+        chartDataSet.drawFilledEnabled = true
         
+        
+        // chart data
         let chartData = LineChartData(dataSet: chartDataSet)
-        chartDataSet.colors = [UIColor.blue]
-        
-
-
-      
         lineChart.data = chartData
+        
+        // line chart view itself
         lineChart.backgroundColor = UIColor(red: 235/255, green: 169/255, blue: 24/255, alpha: 1.0)
-
-        lineChart.xAxis.granularity = 1
-        let chartFormatter = LineChartFormatter()
+        
+        // X Axis
+//        lineChart.xAxis.granularity = 1
+        let xChartFormatter = XAxisChartFormatter()
         let xAxis = XAxis()
-        xAxis.valueFormatter = chartFormatter
+        xAxis.valueFormatter = xChartFormatter
         lineChart.xAxis.valueFormatter = xAxis.valueFormatter
-        lineChart.xAxis.axisLineColor = UIColor.clear
+        lineChart.xAxis.drawGridLinesEnabled = false
+        lineChart.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        lineChart.xAxis.axisLineColor = .white
+        // Right Axis
+        lineChart.rightAxis.enabled = false
+        
+        // Y Axis
+        let yChartFormatter = YAxisChartFormatter()
+        let yAxis = YAxis()
+        yAxis.valueFormatter = yChartFormatter
+        lineChart.leftAxis.valueFormatter = yAxis.valueFormatter
+        lineChart.leftAxis.gridColor = .white
+        lineChart.leftAxis.axisLineColor = .white
+        
+        // disable legend
+        lineChart.legend.enabled = false
+        
+        // Line Chart View
+        lineChart.setExtraOffsets(left: 0, top: 10, right: 20, bottom: 5)
+        lineChart.layer.cornerRadius = 15
+        lineChart.layer.masksToBounds = true
+        lineChart.animate(xAxisDuration: 1)
     }
     
     
@@ -121,7 +147,7 @@ extension Date {
     }
 }
 
-public class LineChartFormatter: NSObject, IAxisValueFormatter{
+public class XAxisChartFormatter: NSObject, IAxisValueFormatter{
     
     let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
@@ -131,3 +157,16 @@ public class LineChartFormatter: NSObject, IAxisValueFormatter{
         return days[Int(value)]
     }
 }
+
+public class YAxisChartFormatter: NSObject, IAxisValueFormatter{
+    
+
+
+    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        
+
+        return "\(Int(value))m"
+    }
+}
+
+
