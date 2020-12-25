@@ -1,0 +1,6 @@
+framework module Pods_AtomicHabitTests {
+  umbrella header "Pods-AtomicHabitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

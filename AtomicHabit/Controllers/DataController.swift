@@ -30,11 +30,16 @@ class DataController: UIViewController {
             
             let time = Double(TimeService.sumTimeFromDates(habit: name as! String, startDate: Date().startOfWeek!, endDate: Date())) / 3600
             
-            let entry = PieChartDataEntry(value: time)
-            entry.label = (name as! String)
-            colors.append(UIColor.random)
+            // only add to pie chart entries that have non zero values
+            if (time > 0) {
+                let entry = PieChartDataEntry(value: time)
+                entry.label = (name as! String)
+                colors.append(UIColor.random)
+                
+                entries.append(entry)
+            }
             
-            entries.append(entry)
+
         }
         
         let chartDataSet = PieChartDataSet(entries: entries, label: nil)
