@@ -32,6 +32,7 @@
 		1F45C5CB24C292BA00F6E2FF /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45C5CA24C292BA00F6E2FF /* HabitService.swift */; };
 		1F45C5D124C4ADAC00F6E2FF /* NewNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45C5D024C4ADAC00F6E2FF /* NewNoteController.swift */; };
 		1F45C5D324C4ADD200F6E2FF /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45C5D224C4ADD200F6E2FF /* LogController.swift */; };
+		1F9B3DDA259D6A3300C031C3 /* HabitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DD9259D6A3300C031C3 /* HabitList.swift */; };
 		1FE5461424A9248600315576 /* NewHabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461324A9248600315576 /* NewHabitController.swift */; };
 		1FE5461824A9264500315576 /* AtomicHabit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461624A9264500315576 /* AtomicHabit.xcdatamodeld */; };
 		1FE5461B24A9271100315576 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461924A9271100315576 /* Habit+CoreDataClass.swift */; };
@@ -94,6 +95,7 @@
 		1F45C5CA24C292BA00F6E2FF /* HabitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitService.swift; sourceTree = "<group>"; };
 		1F45C5D024C4ADAC00F6E2FF /* NewNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteController.swift; sourceTree = "<group>"; };
 		1F45C5D224C4ADD200F6E2FF /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
+		1F9B3DD9259D6A3300C031C3 /* HabitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitList.swift; sourceTree = "<group>"; };
 		1FE5461324A9248600315576 /* NewHabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitController.swift; sourceTree = "<group>"; };
 		1FE5461724A9264500315576 /* AtomicHabit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AtomicHabit.xcdatamodel; sourceTree = "<group>"; };
 		1FE5461924A9271100315576 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		1F379C0C24660DB200163DF1 /* AtomicHabit */ = {
 			isa = PBXGroup;
 			children = (
+				1F9B3DD5259D6A0E00C031C3 /* Views */,
 				1F1319A32582A0B20062BDDA /* CustomComponents */,
 				1F45C5C524C13E0600F6E2FF /* Services */,
 				1F1592F624A9339900F2F0D2 /* Models */,
@@ -225,6 +228,14 @@
 				1F41B17124CA6EA1004894C6 /* CompletionService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1F9B3DD5259D6A0E00C031C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F9B3DD9259D6A3300C031C3 /* HabitList.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1FE5461224A9245500315576 /* Controllers */ = {
@@ -537,6 +548,7 @@
 				1FF4097B2531569A00A676A3 /* IntervalSumController.swift in Sources */,
 				1F41B16F24C93370004894C6 /* Completion+CoreDataClass.swift in Sources */,
 				1F04089C24B6C49200D483BE /* Interval+CoreDataClass.swift in Sources */,
+				1F9B3DDA259D6A3300C031C3 /* HabitList.swift in Sources */,
 				1F04089D24B6C49200D483BE /* Interval+CoreDataProperties.swift in Sources */,
 				1F41B16624C4B01A004894C6 /* NoteCell.swift in Sources */,
 				1F45C5D124C4ADAC00F6E2FF /* NewNoteController.swift in Sources */,
