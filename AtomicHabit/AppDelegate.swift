@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if #available(iOS 13.0, *) { } else {
+//            self.window = UIWindow(frame: UIScreen.main.bounds)
+//            let mainViewController = ViewController()
+//            let mainNavigationController = UINavigationController(rootViewController: mainViewController)
+//            self.window!.rootViewController = mainNavigationController
+//            self.window!.makeKeyAndVisible()
+            print("not ios 13")
+        }
         return true
     }
 

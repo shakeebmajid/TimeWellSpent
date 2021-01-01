@@ -506,7 +506,7 @@
         <!--Habit Controller-->
         <scene sceneID="MKS-zD-KcV">
             <objects>
-                <viewController id="XKQ-YA-fWT" customClass="HabitController" customModule="AtomicHabit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HabitController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XKQ-YA-fWT" customClass="HabitController" customModule="AtomicHabit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vxv-XI-7i8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -558,9 +558,8 @@
                                                     <constraint firstAttribute="height" constant="233" id="PDJ-vF-CJb"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmL-8V-7N6" customClass="StandardButton" customModule="AtomicHabit" customModuleProvider="target">
-                                                <rect key="frame" x="156" y="211" width="74" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmL-8V-7N6" customClass="StandardButton" customModule="AtomicHabit" customModuleProvider="target">
+                                                <rect key="frame" x="156" y="211" width="63" height="30"/>
                                                 <state key="normal" title="time logs"/>
                                                 <connections>
                                                     <segue destination="vpv-20-85Q" kind="show" identifier="toIntervalSums" id="00z-uE-61G"/>
@@ -644,8 +643,10 @@
                                             <constraint firstItem="dQp-4i-mCi" firstAttribute="top" secondItem="2h2-n6-jCW" secondAttribute="bottom" constant="14.5" id="4CO-d9-FgV"/>
                                             <constraint firstItem="ncZ-Vg-RQi" firstAttribute="centerX" secondItem="aWo-HM-e6Y" secondAttribute="centerX" id="5L2-wy-nN0"/>
                                             <constraint firstItem="2h2-n6-jCW" firstAttribute="leading" secondItem="7I7-eU-TZX" secondAttribute="leading" constant="22" id="7at-aW-rdl"/>
+                                            <constraint firstItem="BmL-8V-7N6" firstAttribute="centerX" secondItem="7I7-eU-TZX" secondAttribute="centerX" id="7if-x7-fVW"/>
                                             <constraint firstItem="Ipc-wR-GAC" firstAttribute="leading" secondItem="6mJ-uc-8KU" secondAttribute="trailing" constant="7" id="8b9-eu-hnk"/>
                                             <constraint firstItem="dQp-4i-mCi" firstAttribute="centerX" secondItem="7I7-eU-TZX" secondAttribute="centerX" multiplier="1:4" id="Bq9-Y6-8n6"/>
+                                            <constraint firstItem="Mhm-nm-wt7" firstAttribute="top" secondItem="BmL-8V-7N6" secondAttribute="bottom" constant="135" id="Brx-Wk-eNF"/>
                                             <constraint firstItem="6mJ-uc-8KU" firstAttribute="top" secondItem="MHG-fG-iRf" secondAttribute="bottom" constant="16" id="FQd-mc-GcC"/>
                                             <constraint firstItem="Ipc-wR-GAC" firstAttribute="centerY" secondItem="6mJ-uc-8KU" secondAttribute="centerY" id="KCZ-Cc-C7q"/>
                                             <constraint firstItem="szm-gX-R3O" firstAttribute="centerY" secondItem="2h2-n6-jCW" secondAttribute="centerY" id="MXX-aU-fLb"/>
