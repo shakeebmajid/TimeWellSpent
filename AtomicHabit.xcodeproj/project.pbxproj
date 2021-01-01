@@ -35,6 +35,8 @@
 		1F9B3DDA259D6A3300C031C3 /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */; };
 		1F9B3DE0259FBE9200C031C3 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */; };
 		1F9B3DEE259FCC2000C031C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DED259FCC2000C031C3 /* SceneDelegate.swift */; };
+		1FA40F992596902F00BAD283 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA40F982596902F00BAD283 /* ContainerView.swift */; };
+		1FA40FA1259696BC00BAD283 /* DesignableLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA40FA0259696BC00BAD283 /* DesignableLineChartView.swift */; };
 		1FE5461424A9248600315576 /* NewHabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461324A9248600315576 /* NewHabitController.swift */; };
 		1FE5461824A9264500315576 /* AtomicHabit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461624A9264500315576 /* AtomicHabit.xcdatamodeld */; };
 		1FE5461B24A9271100315576 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461924A9271100315576 /* Habit+CoreDataClass.swift */; };
@@ -100,6 +102,8 @@
 		1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
 		1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
 		1F9B3DED259FCC2000C031C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1FA40F982596902F00BAD283 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		1FA40FA0259696BC00BAD283 /* DesignableLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableLineChartView.swift; sourceTree = "<group>"; };
 		1FE5461324A9248600315576 /* NewHabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitController.swift; sourceTree = "<group>"; };
 		1FE5461724A9264500315576 /* AtomicHabit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AtomicHabit.xcdatamodel; sourceTree = "<group>"; };
 		1FE5461924A9271100315576 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				1F1319A42582A0F90062BDDA /* StandardButton.swift */,
+				1FA40F982596902F00BAD283 /* ContainerView.swift */,
+				1FA40FA0259696BC00BAD283 /* DesignableLineChartView.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -571,7 +577,9 @@
 				1F379C0E24660DB200163DF1 /* AppDelegate.swift in Sources */,
 				1FF40976253155F900A676A3 /* IntervalSumCell.swift in Sources */,
 				1F45C5C924C2176A00F6E2FF /* DataController.swift in Sources */,
+				1FA40F992596902F00BAD283 /* ContainerView.swift in Sources */,
 				1F41B17224CA6EA1004894C6 /* CompletionService.swift in Sources */,
+				1FA40FA1259696BC00BAD283 /* DesignableLineChartView.swift in Sources */,
 				1F1592F824A933D100F2F0D2 /* HabitCell.swift in Sources */,
 				1F41B16924C4B264004894C6 /* Note+CoreDataProperties.swift in Sources */,
 				1F45C5C424BEA2A700F6E2FF /* HabitController.swift in Sources */,
