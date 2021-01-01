@@ -193,12 +193,23 @@ class TimeService {
     }
     
     static func formatSeconds(seconds: Int) -> String {
-        let duration: TimeInterval = 150 // 2 minutes, 30 seconds
 
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .positional
         formatter.allowedUnits = [ .hour, .minute, .second ]
         formatter.zeroFormattingBehavior = [ .pad ]
+
+        let formattedDuration = formatter.string(from: TimeInterval(seconds))!
+        
+        return formattedDuration
+    }
+    
+    static func formatTimeAbbreviated(seconds: Int) -> String {
+        
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .abbreviated
+        formatter.allowedUnits = [ .day, .hour, .minute, .second ]
+        formatter.zeroFormattingBehavior = [ .dropAll ]
 
         let formattedDuration = formatter.string(from: TimeInterval(seconds))!
         
