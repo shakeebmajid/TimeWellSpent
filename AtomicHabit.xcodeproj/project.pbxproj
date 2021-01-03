@@ -35,8 +35,16 @@
 		1F9B3DDA259D6A3300C031C3 /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */; };
 		1F9B3DE0259FBE9200C031C3 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */; };
 		1F9B3DEE259FCC2000C031C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DED259FCC2000C031C3 /* SceneDelegate.swift */; };
+		1F9B3E0525A0D01600C031C3 /* StoryboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3E0425A0D01600C031C3 /* StoryboardView.swift */; };
+		1F9B3E0A25A0D05900C031C3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3E0925A0D05900C031C3 /* CardView.swift */; };
+		1F9B3E0F25A0D1C200C031C3 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3E0E25A0D1C200C031C3 /* HabitView.swift */; };
+		1F9B3E1425A0DC4800C031C3 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3E1325A0DC4800C031C3 /* TimeViewModel.swift */; };
+		1F9B3E1925A0F22200C031C3 /* SubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3E1825A0F22100C031C3 /* SubmitView.swift */; };
 		1FA40F992596902F00BAD283 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA40F982596902F00BAD283 /* ContainerView.swift */; };
 		1FA40FA1259696BC00BAD283 /* DesignableLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA40FA0259696BC00BAD283 /* DesignableLineChartView.swift */; };
+		1FAC025D25A2698B0048A403 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC025C25A2698B0048A403 /* TimeView.swift */; };
+		1FAC026225A26CAC0048A403 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC026125A26CAC0048A403 /* LineChart.swift */; };
+		1FAC027225A270C80048A403 /* LineChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC027125A270C80048A403 /* LineChartViewModel.swift */; };
 		1FE5461424A9248600315576 /* NewHabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461324A9248600315576 /* NewHabitController.swift */; };
 		1FE5461824A9264500315576 /* AtomicHabit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461624A9264500315576 /* AtomicHabit.xcdatamodeld */; };
 		1FE5461B24A9271100315576 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5461924A9271100315576 /* Habit+CoreDataClass.swift */; };
@@ -102,8 +110,16 @@
 		1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
 		1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
 		1F9B3DED259FCC2000C031C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1F9B3E0425A0D01600C031C3 /* StoryboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardView.swift; sourceTree = "<group>"; };
+		1F9B3E0925A0D05900C031C3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		1F9B3E0E25A0D1C200C031C3 /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
+		1F9B3E1325A0DC4800C031C3 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
+		1F9B3E1825A0F22100C031C3 /* SubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitView.swift; sourceTree = "<group>"; };
 		1FA40F982596902F00BAD283 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		1FA40FA0259696BC00BAD283 /* DesignableLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableLineChartView.swift; sourceTree = "<group>"; };
+		1FAC025C25A2698B0048A403 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		1FAC026125A26CAC0048A403 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		1FAC027125A270C80048A403 /* LineChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartViewModel.swift; sourceTree = "<group>"; };
 		1FE5461324A9248600315576 /* NewHabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitController.swift; sourceTree = "<group>"; };
 		1FE5461724A9264500315576 /* AtomicHabit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AtomicHabit.xcdatamodel; sourceTree = "<group>"; };
 		1FE5461924A9271100315576 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -246,6 +262,12 @@
 			isa = PBXGroup;
 			children = (
 				1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */,
+				1F9B3E0425A0D01600C031C3 /* StoryboardView.swift */,
+				1F9B3E0925A0D05900C031C3 /* CardView.swift */,
+				1F9B3E0E25A0D1C200C031C3 /* HabitView.swift */,
+				1F9B3E1825A0F22100C031C3 /* SubmitView.swift */,
+				1FAC025C25A2698B0048A403 /* TimeView.swift */,
+				1FAC026125A26CAC0048A403 /* LineChart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,6 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */,
+				1F9B3E1325A0DC4800C031C3 /* TimeViewModel.swift */,
+				1FAC027125A270C80048A403 /* LineChartViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -562,6 +586,7 @@
 				1F41B17024C93370004894C6 /* Completion+CoreDataProperties.swift in Sources */,
 				1F1319A52582A0F90062BDDA /* StandardButton.swift in Sources */,
 				1FE5461824A9264500315576 /* AtomicHabit.xcdatamodeld in Sources */,
+				1F9B3E0F25A0D1C200C031C3 /* HabitView.swift in Sources */,
 				1F45C5D324C4ADD200F6E2FF /* LogController.swift in Sources */,
 				1F9B3DEE259FCC2000C031C3 /* SceneDelegate.swift in Sources */,
 				1FE5461424A9248600315576 /* NewHabitController.swift in Sources */,
@@ -576,19 +601,26 @@
 				1F45C5D124C4ADAC00F6E2FF /* NewNoteController.swift in Sources */,
 				1F379C0E24660DB200163DF1 /* AppDelegate.swift in Sources */,
 				1FF40976253155F900A676A3 /* IntervalSumCell.swift in Sources */,
+				1FAC025D25A2698B0048A403 /* TimeView.swift in Sources */,
 				1F45C5C924C2176A00F6E2FF /* DataController.swift in Sources */,
 				1FA40F992596902F00BAD283 /* ContainerView.swift in Sources */,
 				1F41B17224CA6EA1004894C6 /* CompletionService.swift in Sources */,
 				1FA40FA1259696BC00BAD283 /* DesignableLineChartView.swift in Sources */,
 				1F1592F824A933D100F2F0D2 /* HabitCell.swift in Sources */,
+				1F9B3E0525A0D01600C031C3 /* StoryboardView.swift in Sources */,
+				1F9B3E1425A0DC4800C031C3 /* TimeViewModel.swift in Sources */,
 				1F41B16924C4B264004894C6 /* Note+CoreDataProperties.swift in Sources */,
 				1F45C5C424BEA2A700F6E2FF /* HabitController.swift in Sources */,
+				1FAC026225A26CAC0048A403 /* LineChart.swift in Sources */,
 				1F41B16C24C4B3D6004894C6 /* NoteService.swift in Sources */,
 				1F1592FA24AAE26700F2F0D2 /* TimerController.swift in Sources */,
 				1F45C5CB24C292BA00F6E2FF /* HabitService.swift in Sources */,
+				1FAC027225A270C80048A403 /* LineChartViewModel.swift in Sources */,
 				1F45C5C724C13E3000F6E2FF /* TimeService.swift in Sources */,
 				1F41B16A24C4B264004894C6 /* Note+CoreDataClass.swift in Sources */,
 				1FE5461C24A9271100315576 /* Habit+CoreDataProperties.swift in Sources */,
+				1F9B3E1925A0F22200C031C3 /* SubmitView.swift in Sources */,
+				1F9B3E0A25A0D05900C031C3 /* CardView.swift in Sources */,
 				1FE5461B24A9271100315576 /* Habit+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,6 +800,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HR7QQ25H6;
 				INFOPLIST_FILE = AtomicHabit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -787,6 +820,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HR7QQ25H6;
 				INFOPLIST_FILE = AtomicHabit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

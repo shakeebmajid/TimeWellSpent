@@ -210,6 +210,7 @@ class TimeService {
         formatter.unitsStyle = .abbreviated
         formatter.allowedUnits = [ .day, .hour, .minute, .second ]
         formatter.zeroFormattingBehavior = [ .dropAll ]
+        formatter.maximumUnitCount = 2
 
         let formattedDuration = formatter.string(from: TimeInterval(seconds))!
         
