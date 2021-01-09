@@ -11,27 +11,51 @@ import SwiftUI
 @available(iOS 13.0.0, *)
 struct HabitView: View {
     @State var showForm = false
-    
     var habit: String
     
     var body: some View {
-        VStack {
-            TimeView(habit: habit)
-            VStack(alignment: .leading) {
-                Text("Trends")
-                    .padding(.top, 10)
-                    .padding(.horizontal, 10)
-                LineChart(habit: habit)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 10)
+        ZStack {
+            
+            VStack {
+                Toggle(isOn: $showForm) {
+                    Text("Show welcome message")
+                }.padding()
+                
+                TimeView(habit: habit)
+                VStack(alignment: .leading) {
+                    Text("Trends")
+                        .padding(.top, 10)
+                        .padding(.horizontal, 10)
+                    LineChart(habit: habit)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 10)
+                }
+                .background(Color(.secondarySystemBackground))
+                .cornerRadius(15)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 10)
+                .frame(height: 300)
+                
+                NavigationLink(destination: JournalView(habit: habit), label: {
+                    Text("Logs")
+                })
+            
             }
-            .background(Color(.secondarySystemBackground))
-            .cornerRadius(15)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 10)
-            .frame(height: 300)
+            .navigationBarTitle(habit)
+            
+            if showForm {
+                SubmitView(timeViewModel: TimeViewModel(habit: "habit"))
+                    .background(Color(.clear))
+                    .cornerRadius(20.0)
+                    .aspectRatio(contentMode: .fit)
+                    
+                    .padding(.horizontal, 40)
+                
+            }
+            
         }
-        .navigationBarTitle(habit)
+        
+
     }
 //                if showForm {
 //                    Color.gray.opacity(0.4).edgesIgnoringSafeArea(.all)

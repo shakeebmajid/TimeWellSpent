@@ -12,6 +12,8 @@
     <entity name="Interval" representedClassName="Interval" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="habit" optional="YES" attributeType="String"/>
+        <attribute name="intervalDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="seconds" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Note" representedClassName="Note" syncable="YES">
@@ -22,7 +24,7 @@
     <elements>
         <element name="Completion" positionX="-63" positionY="27" width="128" height="88"/>
         <element name="Habit" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="Interval" positionX="-63" positionY="0" width="128" height="90"/>
+        <element name="Interval" positionX="-63" positionY="0" width="128" height="118"/>
         <element name="Note" positionX="-63" positionY="18" width="128" height="88"/>
     </elements>
 </model>

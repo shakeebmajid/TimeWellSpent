@@ -35,10 +35,12 @@ class TimeViewModel: ObservableObject {
         print(times)
     }
     
-    func submitTime(hours: Int, minutes: Int) {
+    func submitTime(hours: Int, minutes: Int, entryDate: Date, note: String) {
         TimeService.saveTime (
             habit : habit,
-            seconds : hours * 60 * 60 + minutes * 60
+            seconds : hours * 60 * 60 + minutes * 60,
+            note: note,
+            entryDate: entryDate
         )
         fetchData()
         

@@ -12,13 +12,15 @@ import CoreData
 
 class TimeService {
     
-    static func saveTime(habit: String, seconds: Int) {
+    static func saveTime(habit: String, seconds: Int, note: String, entryDate: Date) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Interval", in: context)
         
         let newEntity = NSManagedObject(entity: entity!, insertInto: context)
         newEntity.setValue(seconds, forKey: "seconds")
         newEntity.setValue(habit, forKey: "habit")
+        newEntity.setValue(note, forKey: "note")
+        newEntity.setValue(entryDate, forKey: "createdAt")
         
         do {
             try context.save()
@@ -183,27 +185,6 @@ class TimeService {
         return totalTime
     }
 
-    static func formatTime(seconds: Int) -> String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.dateFormat = "HH:mm:ss"
-        
-        return formatter.string(from: Date(timeIntervalSinceReferenceDate: TimeInterval(seconds)))
-    }
-    
-    static func formatSeconds(seconds: Int) -> String {
-
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .positional
-        formatter.allowedUnits = [ .hour, .minute, .second ]
-        formatter.zeroFormattingBehavior = [ .pad ]
-
-        let formattedDuration = formatter.string(from: TimeInterval(seconds))!
-        
-        return formattedDuration
-    }
-    
     static func formatTimeAbbreviated(seconds: Int) -> String {
         
         let formatter = DateComponentsFormatter()

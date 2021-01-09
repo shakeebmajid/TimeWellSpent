@@ -32,8 +32,8 @@ class TimerController: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         times = TimeService.getIntervalsForCurrentDay(habit: habit!)
         tableView.reloadData()
-        dayTimeLabel.text = "\(TimeService.formatTime(seconds: TimeService.sumTimeFromIntervals(intervals: times)))"
-        weekTimeLabel.text = "\(TimeService.formatTime(seconds: TimeService.sumTimeFromDates(habit: habit!, startDate: Date().startOfWeek!, endDate: Date())))"
+        dayTimeLabel.text = "\(TimeService.formatTimeAbbreviated(seconds: TimeService.sumTimeFromIntervals(intervals: times)))"
+        weekTimeLabel.text = "\(TimeService.formatTimeAbbreviated(seconds: TimeService.sumTimeFromDates(habit: habit!, startDate: Date().startOfWeek!, endDate: Date())))"
         
         // for going to background while a timer is running
         NotificationCenter.default.addObserver(self, selector: #selector(pauseWhenBackground(noti: )), name: UIApplication.didEnterBackgroundNotification, object: nil)
@@ -52,7 +52,7 @@ class TimerController: UIViewController, UITableViewDataSource, UITableViewDeleg
         if let savedDate = UserDefaults.standard.object(forKey: "savedTime") as? Date {
             let diffSeconds = getTimeDifference(startDate: savedDate)
             interval += diffSeconds
-            timeLabel.text = TimeService.formatTime(seconds: interval)
+            timeLabel.text = TimeService.formatTimeAbbreviated(seconds: interval)
             
         }
         startTimer()
@@ -141,7 +141,7 @@ class TimerController: UIViewController, UITableViewDataSource, UITableViewDeleg
         let row = indexPath.row
 
         cell.lapLabel.text = "\(row)"
-        cell.lapTimeLabel.text = TimeService.formatTime(seconds: times[row].value(forKey: "seconds") as! Int)
+        cell.lapTimeLabel.text = TimeService.formatTimeAbbreviated(seconds: times[row].value(forKey: "seconds") as! Int)
         
         
         return cell

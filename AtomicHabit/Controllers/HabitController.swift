@@ -51,11 +51,11 @@ class HabitController: UIViewController {
     
     
     @IBAction func submitTime(_ sender: Any) {
-        if !timeTextField.text!.isEmpty {
-            let seconds = Int(timeTextField.text!)! * 60
-            timeTextField.text = ""
-            TimeService.saveTime(habit: habit!, seconds: seconds)
-        }
+//        if !timeTextField.text!.isEmpty {
+//            let seconds = Int(timeTextField.text!)! * 60
+//            timeTextField.text = ""
+//            TimeService.saveTime(habit: habit!, seconds: seconds)
+//        }
         
     }
 

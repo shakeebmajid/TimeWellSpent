@@ -16,7 +16,7 @@ struct HabitListView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(.systemBackground)
+//                Color(.systemBackground)
                 List {
                     ForEach(Array(habitsViewModel.habitsByCategory.keys), id: \.self) { category in
                         Section(header: Text(category)) {
