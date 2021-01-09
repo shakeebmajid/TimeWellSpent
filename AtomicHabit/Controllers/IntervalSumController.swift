@@ -39,7 +39,7 @@ class IntervalSumController: UIViewController, UITableViewDataSource, UITableVie
         let df = DateFormatter()
         df.dateFormat = "yyyy-MM-dd"
         cell.startDateLabel.text = df.string(from: dates[row])
-        cell.intervalSumLabel.text = ("\(TimeService.formatTime(seconds: intervalSums[row]))")
+        cell.intervalSumLabel.text = ("\(TimeService.formatTimeAbbreviated(seconds: intervalSums[row]))")
         
         
         return cell

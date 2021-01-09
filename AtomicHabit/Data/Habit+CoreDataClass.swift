@@ -11,6 +11,5 @@ import Foundation
 import CoreData
 
 
-public class Habit: NSManagedObject {
-
+public class Habit: NSManagedObject, Identifiable {
 }

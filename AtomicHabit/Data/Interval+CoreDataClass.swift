@@ -12,8 +12,8 @@ import CoreData
 
 @objc(Interval)
 public class Interval: NSManagedObject {
-    public override func awakeFromInsert() {
-        setPrimitiveValue(Date(), forKey: "createdAt")
-        print("\(Date())")
-    }
+//    public override func awakeFromInsert() {
+//        setPrimitiveValue(Date(), forKey: "createdAt")
+//        print("\(Date())")
+//    }
 }

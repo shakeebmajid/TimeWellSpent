@@ -139,6 +139,6 @@ public class YAxisChartFormatter: NSObject, IAxisValueFormatter{
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         
 
-        return "\(Int(value))m"
+        return "\(TimeService.formatTimeAbbreviated(seconds: Int(value * 60)))"
     }
 }
