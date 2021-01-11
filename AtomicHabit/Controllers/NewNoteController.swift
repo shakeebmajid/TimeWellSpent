@@ -18,10 +18,10 @@ class NewNoteController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onSubmit(_ sender: Any) {
-        NoteService.saveNote(habit: habit!, text: textView.text)
-        
-    }
+//    @IBAction func onSubmit(_ sender: Any) {
+//        NoteService.saveNote(habit: habit!, text: textView.text)
+//        
+//    }
     
     /*
     // MARK: - Navigation

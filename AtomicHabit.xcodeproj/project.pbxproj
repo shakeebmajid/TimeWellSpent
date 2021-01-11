@@ -35,6 +35,10 @@
 		1F4E880325AA4AFC005131C4 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E880225AA4AFC005131C4 /* JournalView.swift */; };
 		1F4E880825AA4B69005131C4 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E880725AA4B69005131C4 /* JournalViewModel.swift */; };
 		1F4E880E25AA59D5005131C4 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E880D25AA59D5005131C4 /* Formatter.swift */; };
+		1F808B0625ABEDD3008BF7B0 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B0525ABEDD3008BF7B0 /* AddNoteView.swift */; };
+		1F808B0B25ABEF02008BF7B0 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B0A25ABEF02008BF7B0 /* NoteViewModel.swift */; };
+		1F808B1025ABF2C0008BF7B0 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B0F25ABF2C0008BF7B0 /* NoteListView.swift */; };
+		1F808B1525ABF2D8008BF7B0 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B1425ABF2D8008BF7B0 /* NoteView.swift */; };
 		1F9B3DDA259D6A3300C031C3 /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */; };
 		1F9B3DE0259FBE9200C031C3 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */; };
 		1F9B3DEE259FCC2000C031C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DED259FCC2000C031C3 /* SceneDelegate.swift */; };
@@ -113,6 +117,10 @@
 		1F4E880225AA4AFC005131C4 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		1F4E880725AA4B69005131C4 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		1F4E880D25AA59D5005131C4 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		1F808B0525ABEDD3008BF7B0 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		1F808B0A25ABEF02008BF7B0 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		1F808B0F25ABF2C0008BF7B0 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		1F808B1425ABF2D8008BF7B0 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
 		1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
 		1F9B3DED259FCC2000C031C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +292,9 @@
 				1FAC025C25A2698B0048A403 /* TimeView.swift */,
 				1FAC026125A26CAC0048A403 /* LineChart.swift */,
 				1F4E880225AA4AFC005131C4 /* JournalView.swift */,
+				1F808B0525ABEDD3008BF7B0 /* AddNoteView.swift */,
+				1F808B0F25ABF2C0008BF7B0 /* NoteListView.swift */,
+				1F808B1425ABF2D8008BF7B0 /* NoteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +306,7 @@
 				1F9B3E1325A0DC4800C031C3 /* TimeViewModel.swift */,
 				1FAC027125A270C80048A403 /* LineChartViewModel.swift */,
 				1F4E880725AA4B69005131C4 /* JournalViewModel.swift */,
+				1F808B0A25ABEF02008BF7B0 /* NoteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -599,8 +611,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F808B1525ABF2D8008BF7B0 /* NoteView.swift in Sources */,
 				1F4E880825AA4B69005131C4 /* JournalViewModel.swift in Sources */,
 				1F4E880E25AA59D5005131C4 /* Formatter.swift in Sources */,
+				1F808B1025ABF2C0008BF7B0 /* NoteListView.swift in Sources */,
 				1F379C1024660DB200163DF1 /* ViewController.swift in Sources */,
 				1F41B17024C93370004894C6 /* Completion+CoreDataProperties.swift in Sources */,
 				1F1319A52582A0F90062BDDA /* StandardButton.swift in Sources */,
@@ -609,6 +623,7 @@
 				1F45C5D324C4ADD200F6E2FF /* LogController.swift in Sources */,
 				1F9B3DEE259FCC2000C031C3 /* SceneDelegate.swift in Sources */,
 				1FE5461424A9248600315576 /* NewHabitController.swift in Sources */,
+				1F808B0625ABEDD3008BF7B0 /* AddNoteView.swift in Sources */,
 				1F9B3DE0259FBE9200C031C3 /* HabitsViewModel.swift in Sources */,
 				1FFD985624AFE3F6000D0CCF /* TimeCell.swift in Sources */,
 				1FF4097B2531569A00A676A3 /* IntervalSumController.swift in Sources */,
@@ -618,6 +633,7 @@
 				1F04089D24B6C49200D483BE /* Interval+CoreDataProperties.swift in Sources */,
 				1F41B16624C4B01A004894C6 /* NoteCell.swift in Sources */,
 				1F45C5D124C4ADAC00F6E2FF /* NewNoteController.swift in Sources */,
+				1F808B0B25ABEF02008BF7B0 /* NoteViewModel.swift in Sources */,
 				1F379C0E24660DB200163DF1 /* AppDelegate.swift in Sources */,
 				1FF40976253155F900A676A3 /* IntervalSumCell.swift in Sources */,
 				1FAC025D25A2698B0048A403 /* TimeView.swift in Sources */,

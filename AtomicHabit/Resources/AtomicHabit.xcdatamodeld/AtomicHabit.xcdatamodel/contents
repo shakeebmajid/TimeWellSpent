@@ -20,11 +20,12 @@
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="habit" optional="YES" attributeType="String"/>
         <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Completion" positionX="-63" positionY="27" width="128" height="88"/>
         <element name="Habit" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Interval" positionX="-63" positionY="0" width="128" height="118"/>
-        <element name="Note" positionX="-63" positionY="18" width="128" height="88"/>
+        <element name="Note" positionX="-63" positionY="18" width="128" height="103"/>
     </elements>
 </model>

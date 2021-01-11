@@ -17,6 +17,7 @@ extension Note {
     }
 
     @NSManaged public var habit: String?
+    @NSManaged public var title: String?
     @NSManaged public var text: String?
 
 }
