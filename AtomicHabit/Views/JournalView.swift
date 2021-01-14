@@ -16,14 +16,14 @@ struct JournalView: View {
     }
     var body: some View {
         List {
-            ForEach(Array(journalViewModel.logsByDate.keys.sorted()), id: \.self) { date in
+            ForEach(Array(journalViewModel.logsByDate.keys.sorted() { $0 > $1 }), id: \.self) { date in
                 Section(header: Text("\(Formatter.formatDate(date: date))")) {
                     
                     ForEach(journalViewModel.logsByDate[date] ?? [], id: \.self) { log in
                         VStack {
-                            Text("\(log.habit ?? "")")
-                            Text("\(log.seconds)")
-                            Text("\(log.note ?? "")")
+                            Text("Time: \(Formatter.formatTimeFromDate(date: date))")
+                            Text("Interval: \(log.seconds)")
+                            Text("Note: \(log.note ?? "")")
                         }
 
                     }

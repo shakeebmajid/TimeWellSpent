@@ -14,47 +14,47 @@ struct HabitView: View {
     var habit: String
     
     var body: some View {
-        ZStack {
-            
-            VStack {
-                Toggle(isOn: $showForm) {
-                    Text("Show welcome message")
-                }.padding()
+        ScrollView {
+            ZStack {
                 
-                TimeView(habit: habit)
-                VStack(alignment: .leading) {
-                    Text("Trends")
-                        .padding(.top, 10)
-                        .padding(.horizontal, 10)
-                    LineChart(habit: habit)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 10)
-                }
-                .background(Color(.secondarySystemBackground))
-                .cornerRadius(15)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 10)
-                .frame(height: 300)
-                
-                NavigationLink(destination: JournalView(habit: habit), label: {
-                    Text("Logs")
-                })
-            
-            }
-            .navigationBarTitle(habit)
-            
-            if showForm {
-                SubmitView(timeViewModel: TimeViewModel(habit: "habit"))
-                    .background(Color(.clear))
-                    .cornerRadius(20.0)
-                    .aspectRatio(contentMode: .fit)
+                VStack {
+                    Toggle(isOn: $showForm) {
+                        Text("Show welcome message")
+                    }.padding()
                     
-                    .padding(.horizontal, 40)
+                    TimeView(habit: habit)
+                    VStack(alignment: .leading) {
+                        LineChartSectionView(habit: habit)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 10)
+                    }
+                    .background(Color(.secondarySystemBackground))
+                    .cornerRadius(15)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 10)
+                    .frame(height: 300)
+                    
+                    NavigationLink(destination: JournalView(habit: habit), label: {
+                        Text("Logs")
+                    })
+                    
+                    NoteListView(habit: habit)
+                
+                }
+                .navigationBarTitle(habit)
+                
+                if showForm {
+                    SubmitView(timeViewModel: TimeViewModel(habit: "habit"))
+                        .background(Color(.clear))
+                        .cornerRadius(20.0)
+                        .aspectRatio(contentMode: .fit)
+                        
+                        .padding(.horizontal, 40)
+                    
+                }
                 
             }
-            
         }
-        
 
     }
 //                if showForm {

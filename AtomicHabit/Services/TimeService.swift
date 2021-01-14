@@ -169,7 +169,7 @@ class TimeService {
     }
     
     static func sumIntervalsForCurrentMonth(habit: String) -> Int {
-        let intervals = getIntervalsFromStartDate(startDate: Date.startOfMonth, habit: habit)
+        let intervals = getIntervalsFromStartDate(startDate: Date().startOfMonth, habit: habit)
         let totalTime = sumTimeFromIntervals(intervals: intervals)
         print("Time this month for habit: \(totalTime)")
         
@@ -196,25 +196,5 @@ class TimeService {
         let formattedDuration = formatter.string(from: TimeInterval(seconds))!
         
         return formattedDuration
-    }
-}
-
-extension Date {
-    var startOfDay: Date {
-        return Calendar.current.startOfDay(for: self)
-    }
-    
-    var startOfWeek: Date? {
-        let gregorian = Calendar(identifier: .iso8601)
-        guard let monday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
-        return monday
-    }
-    
-    static var startOfMonth: Date {
-
-        let calendar = Calendar(identifier: .gregorian)
-        let components = calendar.dateComponents([.year, .month], from: Date())
-
-        return  calendar.date(from: components)!
     }
 }
