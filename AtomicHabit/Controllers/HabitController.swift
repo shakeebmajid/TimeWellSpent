@@ -13,7 +13,6 @@ import Charts
 class HabitController: UIViewController {
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var lineChart: DesignableLineChartView!
     @IBOutlet weak var dayTimeLabel: UILabel!
     @IBOutlet weak var weekTimeLabel: UILabel!
     @IBOutlet weak var monthTimeLabel: UILabel!
@@ -31,7 +30,6 @@ class HabitController: UIViewController {
         
         // retrieves the times for day, week, month, all
         setTimeLabels()
-        lineChart.dayTotalsBarChart(habit: habit!)
     }
     
     func setTimeLabels() {

@@ -24,10 +24,7 @@ struct HabitView: View {
                     
                     TimeView(habit: habit)
                     VStack(alignment: .leading) {
-                        Text("Trends")
-                            .padding(.top, 10)
-                            .padding(.horizontal, 10)
-                        LineChart(habit: habit)
+                        LineChartSectionView(habit: habit)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 10)
                     }

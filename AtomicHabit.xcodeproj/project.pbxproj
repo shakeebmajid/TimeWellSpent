@@ -39,6 +39,8 @@
 		1F808B0B25ABEF02008BF7B0 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B0A25ABEF02008BF7B0 /* NoteViewModel.swift */; };
 		1F808B1025ABF2C0008BF7B0 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B0F25ABF2C0008BF7B0 /* NoteListView.swift */; };
 		1F808B1525ABF2D8008BF7B0 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B1425ABF2D8008BF7B0 /* NoteView.swift */; };
+		1F808B2125AFC6A3008BF7B0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B2025AFC6A2008BF7B0 /* Date.swift */; };
+		1F808B3125AFCF63008BF7B0 /* LineChartSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F808B3025AFCF63008BF7B0 /* LineChartSectionView.swift */; };
 		1F9B3DDA259D6A3300C031C3 /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */; };
 		1F9B3DE0259FBE9200C031C3 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */; };
 		1F9B3DEE259FCC2000C031C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B3DED259FCC2000C031C3 /* SceneDelegate.swift */; };
@@ -121,6 +123,8 @@
 		1F808B0A25ABEF02008BF7B0 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		1F808B0F25ABF2C0008BF7B0 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		1F808B1425ABF2D8008BF7B0 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		1F808B2025AFC6A2008BF7B0 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		1F808B3025AFCF63008BF7B0 /* LineChartSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartSectionView.swift; sourceTree = "<group>"; };
 		1F9B3DD9259D6A3300C031C3 /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
 		1F9B3DDF259FBE9200C031C3 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
 		1F9B3DED259FCC2000C031C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 		1F379C0C24660DB200163DF1 /* AtomicHabit */ = {
 			isa = PBXGroup;
 			children = (
+				1F808B1F25AFC692008BF7B0 /* Extensions */,
 				1F4E880C25AA59C5005131C4 /* Utils */,
 				1FE5461E24A9279900315576 /* Data */,
 				1F9B3DDE259FBDC800C031C3 /* ViewModels */,
@@ -281,6 +286,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		1F808B1F25AFC692008BF7B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F808B2025AFC6A2008BF7B0 /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1F9B3DD5259D6A0E00C031C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +308,7 @@
 				1F808B0525ABEDD3008BF7B0 /* AddNoteView.swift */,
 				1F808B0F25ABF2C0008BF7B0 /* NoteListView.swift */,
 				1F808B1425ABF2D8008BF7B0 /* NoteView.swift */,
+				1F808B3025AFCF63008BF7B0 /* LineChartSectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -630,10 +644,12 @@
 				1F41B16F24C93370004894C6 /* Completion+CoreDataClass.swift in Sources */,
 				1F04089C24B6C49200D483BE /* Interval+CoreDataClass.swift in Sources */,
 				1F9B3DDA259D6A3300C031C3 /* HabitListView.swift in Sources */,
+				1F808B2125AFC6A3008BF7B0 /* Date.swift in Sources */,
 				1F04089D24B6C49200D483BE /* Interval+CoreDataProperties.swift in Sources */,
 				1F41B16624C4B01A004894C6 /* NoteCell.swift in Sources */,
 				1F45C5D124C4ADAC00F6E2FF /* NewNoteController.swift in Sources */,
 				1F808B0B25ABEF02008BF7B0 /* NoteViewModel.swift in Sources */,
+				1F808B3125AFCF63008BF7B0 /* LineChartSectionView.swift in Sources */,
 				1F379C0E24660DB200163DF1 /* AppDelegate.swift in Sources */,
 				1FF40976253155F900A676A3 /* IntervalSumCell.swift in Sources */,
 				1FAC025D25A2698B0048A403 /* TimeView.swift in Sources */,

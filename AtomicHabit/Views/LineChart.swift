@@ -15,22 +15,52 @@ struct LineChart: UIViewRepresentable {
     
     typealias UIViewType = LineChartView
     
-
-    init(habit: String) {
-        lineChartViewModel = LineChartViewModel(habit: habit)
-    }
-    
     func makeUIView(context: Context) -> LineChartView {
-        let lineChart = createChartFromEntries(entries: lineChartViewModel.entries, animate: true)
+        let lineChart = createChartFromEntries(entries: lineChartViewModel.entries, type: lineChartViewModel.type ?? "Week", animate: true)
         
         return lineChart
     }
     
     func updateUIView(_ uiView: LineChartView, context: Context) {
-        
+        uiView.xAxis.valueFormatter = updateXAxis()
+        uiView.data = updateData()
+    }
+    func updateXAxis() -> IAxisValueFormatter {
+        if lineChartViewModel.type == "Week" {
+            let xChartFormatter = WeekXAxisChartFormatter()
+            let xAxis = XAxis()
+            xAxis.valueFormatter = xChartFormatter
+            return xAxis.valueFormatter!
+            
+        } else {
+            let xChartFormatter = MonthXAxisChartFormatter()
+            let xAxis = XAxis()
+            xAxis.valueFormatter = xChartFormatter
+            return xAxis.valueFormatter!
+        }
     }
     
-    func createChartFromEntries(entries: [ChartDataEntry], animate: Bool) -> LineChartView {
+    func updateData() -> LineChartData {
+        let chartDataSet = LineChartDataSet(entries: lineChartViewModel.entries, label: "minutes completed")
+        chartDataSet.drawValuesEnabled = true
+        chartDataSet.drawCirclesEnabled = true
+        chartDataSet.circleHoleRadius = 2.0
+        chartDataSet.circleRadius = 3.0
+        chartDataSet.colors = [UIColor.white]
+        chartDataSet.mode = .cubicBezier
+        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.lineWidth = 3
+        chartDataSet.fill = Fill(color: UIColor.white)
+        chartDataSet.fillAlpha = 0.4
+        chartDataSet.drawFilledEnabled = true
+        
+        
+        // chart data
+        return LineChartData(dataSet: chartDataSet)
+
+    }
+    
+    func createChartFromEntries(entries: [ChartDataEntry], type: String, animate: Bool) -> LineChartView {
         // chart data set
         let chartDataSet = LineChartDataSet(entries: entries, label: "minutes completed")
         chartDataSet.drawValuesEnabled = true
@@ -56,14 +86,17 @@ struct LineChart: UIViewRepresentable {
         lineChart.backgroundColor = UIColor(red: 235/255, green: 169/255, blue: 24/255, alpha: 1.0)
         
         // X Axis
-//        lineChart.xAxis.granularity = 1
-        let xChartFormatter = XAxisChartFormatter()
-        let xAxis = XAxis()
-        xAxis.valueFormatter = xChartFormatter
-        lineChart.xAxis.valueFormatter = xAxis.valueFormatter
+        if type == "Week" {
+            print("Week")
+            let xChartFormatter = WeekXAxisChartFormatter()
+            let xAxis = XAxis()
+            xAxis.valueFormatter = xChartFormatter
+            lineChart.xAxis.valueFormatter = xAxis.valueFormatter
+        }
         lineChart.xAxis.drawGridLinesEnabled = false
         lineChart.xAxis.labelPosition = XAxis.LabelPosition.bottom
         lineChart.xAxis.axisLineColor = .white
+        
         // Right Axis
         lineChart.rightAxis.enabled = false
         
@@ -89,8 +122,8 @@ struct LineChart: UIViewRepresentable {
     }
 }
 
-struct LineChart_Previews: PreviewProvider {
-    static var previews: some View {
-        LineChart(habit: "Meditation")
-    }
-}
+//struct LineChart_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LineChart(lineChartViewModel: LineChartViewModel(habit: "Meditation"))
+//    }
+//}
